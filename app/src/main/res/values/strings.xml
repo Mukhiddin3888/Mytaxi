@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTaxiW</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="want_to_be_a_driver">Want to be a driver?</string>
+    <string name="open_the_driver_app">Open the driver App</string>
+    <string name="what_s_your_number">What’s your number?</string>
+</resources>

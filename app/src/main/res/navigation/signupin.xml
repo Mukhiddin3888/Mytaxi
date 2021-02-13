@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signupin"
+    app:startDestination="@id/mainSignFragment">
+
+    <fragment
+        android:id="@+id/mainSignFragment"
+        android:name="com.example.mytaxiw.MainSignFragment"
+        android:label="fragment_main_sign"
+        tools:layout="@layout/fragment_main_sign" >
+        <action
+            android:id="@+id/action_mainSignFragment_to_signUpFragmentNum"
+            app:destination="@id/signUpFragmentNum" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragmentNum"
+        android:name="com.example.mytaxiw.SignUpFragmentNum"
+        android:label="fragment_sign_up_num"
+        tools:layout="@layout/fragment_sign_up_num" />
+</navigation>
