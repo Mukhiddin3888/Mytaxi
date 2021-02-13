@@ -14,6 +14,7 @@
     <color name="secondary_black">#1C1B19</color>
     <color name="second_yellow">#FDCD03</color>
     <color name="gray">#8C8C8C</color>
+    <color name="gray_w">#CCC1BEB7</color>
     <color name="blue">#487BFF</color>
 
 </resources>

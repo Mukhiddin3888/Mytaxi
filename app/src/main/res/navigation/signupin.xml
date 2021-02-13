@@ -18,5 +18,24 @@
         android:id="@+id/signUpFragmentNum"
         android:name="com.example.mytaxiw.SignUpFragmentNum"
         android:label="fragment_sign_up_num"
-        tools:layout="@layout/fragment_sign_up_num" />
+        tools:layout="@layout/fragment_sign_up_num" >
+        <action
+            android:id="@+id/action_signUpFragmentNum_to_signUpFragmentCode"
+            app:destination="@id/signUpFragmentCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragmentCode"
+        android:name="com.example.mytaxiw.SignUpFragmentCode"
+        android:label="fragment_sign_up_code"
+        tools:layout="@layout/fragment_sign_up_code" >
+        <action
+            android:id="@+id/action_signUpFragmentCode_to_signUpFragmentPassword"
+            app:destination="@id/signUpFragmentPassword"
+            app:popUpTo="@id/mainSignFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragmentPassword"
+        android:name="com.example.mytaxiw.SignUpFragmentPassword"
+        android:label="fragment_sign_up_password"
+        tools:layout="@layout/fragment_sign_up_password" />
 </navigation>
