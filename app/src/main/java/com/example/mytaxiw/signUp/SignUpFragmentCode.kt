@@ -19,8 +19,8 @@ import kotlinx.android.synthetic.main.fragment_sign_up_code.view.*
 class SignUpFragmentCode : Fragment() {
 
     lateinit var auth: FirebaseAuth
-    lateinit var storedVerificationId: String
 
+lateinit var pnumber:String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,17 +41,22 @@ class SignUpFragmentCode : Fragment() {
 
         auth = FirebaseAuth.getInstance()
 
-        arguments?.getString("code")?.let {
-            storedVerificationId = it
+
+
+        var storedVerificationId =  arguments?.getString("code")
+
+
+        arguments?.getString("phoneNumber")?.let {
+            pnumber = it
         }
 
-
+//        view.txv_phone_num_in_code.text = pnumber
 
         view.floating_action_button_code.setOnClickListener {
             var otp = code
             if (otp.isNotEmpty()) {
                 val credential: PhoneAuthCredential = PhoneAuthProvider.getCredential(
-                    storedVerificationId, otp
+                        storedVerificationId!!, otp
                 )
                 signInWithPhoneAuthCredential(credential)
             } else {

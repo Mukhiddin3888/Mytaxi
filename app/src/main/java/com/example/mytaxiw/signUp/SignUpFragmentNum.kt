@@ -2,13 +2,17 @@ package com.example.mytaxiw.signUp
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.mytaxiw.HomeActivity
 import com.example.mytaxiw.R
 import com.google.firebase.FirebaseException
@@ -23,6 +27,9 @@ class SignUpFragmentNum : Fragment() {
     lateinit var storedVerificationId: String
     lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
+
+
+    lateinit var number:String
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -56,18 +63,27 @@ class SignUpFragmentNum : Fragment() {
             override fun onCodeSent(
                     verificationId: String,
                     token: PhoneAuthProvider.ForceResendingToken
+
             ) {
 
                 Log.d("TAG", "onCodeSent:$verificationId")
                 storedVerificationId = verificationId
                 resendToken = token
 
-                val bundle = Bundle()
+                val bundle = bundleOf("code" to storedVerificationId)
+                view.findNavController().navigate(R.id.action_signUpFragmentNum_to_signUpFragmentCode, bundle)
+
+               /* val bundle = Bundle()
 
                 val fragment: Fragment = SignUpFragmentCode()
-                fragment.arguments.apply { bundle.putString("code", storedVerificationId) }
-                Navigation.findNavController(view).navigate(R.id.action_signUpFragmentNum_to_signUpFragmentCode)
+                fragment.arguments.apply {
+                    bundle.putString("code", storedVerificationId)
+                    bundle.putString("phoneNumber", number)
 
+                }
+
+                Navigation.findNavController(view).navigate(R.id.action_signUpFragmentNum_to_signUpFragmentCode)
+*/
             }
         }
 
@@ -83,7 +99,7 @@ class SignUpFragmentNum : Fragment() {
 
     fun login() {
         val mobileNumber = view?.edt_numberUP?.text.toString().trim()
-        val number = "+998" + mobileNumber
+         number = "+998" + mobileNumber
 
         if (number.isNotEmpty()) {
 

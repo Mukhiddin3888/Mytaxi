@@ -30,7 +30,14 @@
         android:id="@+id/signUpFragmentCode"
         android:name="com.example.mytaxiw.signUp.SignUpFragmentCode"
         android:label="fragment_sign_up_code"
-        tools:layout="@layout/fragment_sign_up_code" />
+        tools:layout="@layout/fragment_sign_up_code" >
+        <argument
+            android:name="code"
+            app:argType="string" />
+        <argument
+            android:name="number"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragmentPassword"
         android:name="com.example.mytaxiw.signUp.SignUpFragmentPassword"

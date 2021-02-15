@@ -116,6 +116,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
             />
         <EditText
             android:id="@+id/edt_code2"
@@ -130,6 +132,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
             />
         <EditText
             android:id="@+id/edt_code3"
@@ -145,6 +149,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
             />
         <EditText
             android:id="@+id/edt_code4"
@@ -160,6 +166,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
             />
         <EditText
             android:id="@+id/edt_code5"
@@ -175,6 +183,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
             />
  <EditText
             android:id="@+id/edt_code6"
@@ -190,6 +200,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:inputType="number"
+            android:imeOptions="actionDone"
+             android:importantForAutofill="no"
             />
 
     </LinearLayout>
