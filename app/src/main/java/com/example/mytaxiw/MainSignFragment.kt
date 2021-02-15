@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_main_sign.view.*
+import kotlinx.android.synthetic.main.fragment_sign_up_num.view.*
+import java.util.concurrent.TimeUnit
 
 class MainSignFragment : Fragment() {
 
@@ -24,6 +28,24 @@ class MainSignFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_mainSignFragment_to_signUpFragmentNum)
 
         }
+
+        view.btn_sign_in.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_mainSignFragment_to_logInFragment)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         return view

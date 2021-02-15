@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SignUpFragmentCode">
+    tools:context=".signUp.SignUpFragmentCode">
 
     <FrameLayout
         android:id="@+id/frm_sign"
@@ -105,6 +105,7 @@
         android:weightSum="5"
         >
         <EditText
+            android:id="@+id/edt_code1"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:maxLength="1"
@@ -114,8 +115,10 @@
             android:background="@color/gray_w"
             android:layout_weight="1"
             android:gravity="center"
+            android:inputType="number"
             />
         <EditText
+            android:id="@+id/edt_code2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:maxLength="1"
@@ -126,8 +129,11 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:inputType="number"
             />
         <EditText
+            android:id="@+id/edt_code3"
+
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:maxLength="1"
@@ -138,8 +144,11 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:inputType="number"
             />
         <EditText
+            android:id="@+id/edt_code4"
+
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:maxLength="1"
@@ -150,8 +159,11 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:inputType="number"
             />
         <EditText
+            android:id="@+id/edt_code5"
+
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:maxLength="1"
@@ -162,6 +174,22 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:inputType="number"
+            />
+ <EditText
+            android:id="@+id/edt_code6"
+
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:maxLength="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary_black"
+            android:background="@color/gray_w"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
             />
 
     </LinearLayout>

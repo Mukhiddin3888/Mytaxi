@@ -13,10 +13,13 @@
         <action
             android:id="@+id/action_mainSignFragment_to_signUpFragmentNum"
             app:destination="@id/signUpFragmentNum" />
+        <action
+            android:id="@+id/action_mainSignFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragmentNum"
-        android:name="com.example.mytaxiw.SignUpFragmentNum"
+        android:name="com.example.mytaxiw.signUp.SignUpFragmentNum"
         android:label="fragment_sign_up_num"
         tools:layout="@layout/fragment_sign_up_num" >
         <action
@@ -25,17 +28,17 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragmentCode"
-        android:name="com.example.mytaxiw.SignUpFragmentCode"
+        android:name="com.example.mytaxiw.signUp.SignUpFragmentCode"
         android:label="fragment_sign_up_code"
-        tools:layout="@layout/fragment_sign_up_code" >
-        <action
-            android:id="@+id/action_signUpFragmentCode_to_signUpFragmentPassword"
-            app:destination="@id/signUpFragmentPassword"
-            app:popUpTo="@id/mainSignFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_sign_up_code" />
     <fragment
         android:id="@+id/signUpFragmentPassword"
-        android:name="com.example.mytaxiw.SignUpFragmentPassword"
+        android:name="com.example.mytaxiw.signUp.SignUpFragmentPassword"
         android:label="fragment_sign_up_password"
         tools:layout="@layout/fragment_sign_up_password" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.mytaxiw.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
 </navigation>
