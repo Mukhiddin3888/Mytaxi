@@ -112,7 +112,7 @@ class SignUpFragmentNum : Fragment() {
     private fun sendVerificationcode(number: String) {
         val options = PhoneAuthOptions.newBuilder(auth)
                 .setPhoneNumber(number) // Phone number to verify
-                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                .setTimeout(120L, TimeUnit.SECONDS) // Timeout and unit
                 .setActivity(this.requireActivity()) // Activity (for callback binding)
                 .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
                 .build()
