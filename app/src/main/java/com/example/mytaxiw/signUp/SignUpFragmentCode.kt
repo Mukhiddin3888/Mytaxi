@@ -31,55 +31,13 @@ class SignUpFragmentCode : Fragment() {
 
 
 
-        var code = view.lnl_entercode.text.toString()
 
-        auth = FirebaseAuth.getInstance()
-
-
-
-        var storedVerificationId =  arguments?.getString("code")
-
-
-        var pnumber =  arguments?.getString("phoneNumber")
-
-
-       view.txv_phone_num_in_code.text = pnumber
 
         view.floating_action_button_code.setOnClickListener {
 
 
-
-            var otp=code.trim()
-            if(!otp.isEmpty()){
-                val credential : PhoneAuthCredential = PhoneAuthProvider.getCredential(
-                        storedVerificationId.toString(), otp)
-                signInWithPhoneAuthCredential(credential)
-            }else{
-                Toast.makeText(this.requireContext(),"Enter OTP",Toast.LENGTH_SHORT).show()
-            }
-
         }
         return view
-    }
-
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        auth.signInWithCredential(credential)
-            .addOnCompleteListener(this.requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    val intent = Intent(activity, HomeActivity::class.java)
-                    activity?.startActivity(intent)
-                    activity?.finish()
-
-                } else {
-// Sign in failed, display a message and update the UI
-                    Toast.makeText(this.requireContext(), "sign in failed", Toast.LENGTH_SHORT).show()
-                    if (task.exception is FirebaseAuthInvalidCredentialsException) {
-// The verification code entered was invalid
-                        Toast.makeText(this.requireContext(), "Invalid OTP", Toast.LENGTH_SHORT).show()
-                    }
-
-                }
-            }
     }
 
 }
